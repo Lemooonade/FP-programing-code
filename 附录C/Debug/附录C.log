@@ -1,0 +1,14 @@
+﻿  all_in_one.cpp
+E:\source\repos\附录C\all_in_one.cpp(16,20): warning C4018: “<”: 有符号/无符号不匹配
+E:\source\repos\附录C\all_in_one.cpp(25,29): warning C4018: “<”: 有符号/无符号不匹配
+E:\source\repos\附录C\all_in_one.cpp(15,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : 参见“scanf”的声明
+E:\source\repos\附录C\all_in_one.cpp(60,9): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+E:\source\repos\附录C\all_in_one.cpp(59,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : 参见“scanf”的声明
+E:\source\repos\附录C\all_in_one.cpp(74,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : 参见“scanf”的声明
+E:\source\repos\附录C\all_in_one.cpp(93,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : 参见“scanf”的声明
+E:\source\repos\附录C\all_in_one.cpp(78): warning C4700: 使用了未初始化的局部变量“opt”
+  附录C.vcxproj -> E:\source\repos\附录C\Debug\附录C.exe

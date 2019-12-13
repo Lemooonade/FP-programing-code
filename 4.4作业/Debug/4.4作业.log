@@ -1,0 +1,4 @@
+﻿  87-29.cpp
+D:\source\repos\4.4作业\87-29.cpp(5,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : 参见“scanf”的声明
+  4.4作业.vcxproj -> D:\source\repos\4.4作业\Debug\4.4作业.exe

@@ -1,0 +1,7 @@
+﻿  FP2015-TEST2-EXPERIMENT6-3-26 是5的整倍数吗？.cpp
+D:\source\repos\上机实验\FP2015-TEST2-EXPERIMENT6-3-26 是5的整倍数吗？.cpp(5,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : 参见“scanf”的声明
+D:\source\repos\上机实验\FP2015-TEST2-EXPERIMENT6-3-26 是5的整倍数吗？.cpp(9,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : 参见“scanf”的声明
+D:\source\repos\上机实验\FP2015-TEST2-EXPERIMENT6-3-26 是5的整倍数吗？.cpp(4,17): warning C4101: “j”: 未引用的局部变量
+  上机实验.vcxproj -> D:\source\repos\上机实验\Debug\上机实验.exe

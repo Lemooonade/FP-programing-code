@@ -1,0 +1,97 @@
+﻿  合并c.cpp
+C:\Users\mayday\Desktop\合并c.cpp(1,1): warning C4335: 检测到 Mac 文件格式: 请将源文件转换为 DOS 格式或 UNIX 格式
+C:\Users\mayday\Desktop\合并c.cpp(18,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(20,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(20,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(37,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(37,8): error C2086: “int _80”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(18): message : 参见“_80”的声明
+C:\Users\mayday\Desktop\合并c.cpp(39,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(39,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(64,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(64,8): error C2086: “int _80”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(18): message : 参见“_80”的声明
+C:\Users\mayday\Desktop\合并c.cpp(66,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(66,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(81,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(81,8): error C2086: “int _80”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(18): message : 参见“_80”的声明
+C:\Users\mayday\Desktop\合并c.cpp(83,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(83,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(102,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(102,8): error C2086: “int _80”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(18): message : 参见“_80”的声明
+C:\Users\mayday\Desktop\合并c.cpp(104,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(104,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(127,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(127,8): error C2086: “int _80”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(18): message : 参见“_80”的声明
+C:\Users\mayday\Desktop\合并c.cpp(129,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(129,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(154,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(154,8): error C2086: “int _80”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(18): message : 参见“_80”的声明
+C:\Users\mayday\Desktop\合并c.cpp(156,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(156,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(169,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(169,8): error C2086: “int _80”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(18): message : 参见“_80”的声明
+C:\Users\mayday\Desktop\合并c.cpp(171,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(171,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(184,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(186,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(186,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(203,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(203,8): error C2086: “int _81”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(184): message : 参见“_81”的声明
+C:\Users\mayday\Desktop\合并c.cpp(205,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(205,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(230,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(230,8): error C2086: “int _81”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(184): message : 参见“_81”的声明
+C:\Users\mayday\Desktop\合并c.cpp(232,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(232,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(247,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(247,8): error C2086: “int _81”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(184): message : 参见“_81”的声明
+C:\Users\mayday\Desktop\合并c.cpp(249,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(249,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(268,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(268,8): error C2086: “int _81”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(184): message : 参见“_81”的声明
+C:\Users\mayday\Desktop\合并c.cpp(270,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(270,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(289,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(289,8): error C2086: “int _81”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(184): message : 参见“_81”的声明
+C:\Users\mayday\Desktop\合并c.cpp(291,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(291,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(308,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(308,8): error C2086: “int _81”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(184): message : 参见“_81”的声明
+C:\Users\mayday\Desktop\合并c.cpp(310,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(310,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(329,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(329,8): error C2086: “int _81”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(184): message : 参见“_81”的声明
+C:\Users\mayday\Desktop\合并c.cpp(331,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(331,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(352,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(352,8): error C2086: “int _81”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(184): message : 参见“_81”的声明
+C:\Users\mayday\Desktop\合并c.cpp(354,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(354,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(375,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(377,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(377,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(396,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(396,8): error C2086: “int _82”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(375): message : 参见“_82”的声明
+C:\Users\mayday\Desktop\合并c.cpp(398,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(398,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(437,8): error C2143: 语法错误: 缺少“;”(在“-”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(437,8): error C2086: “int _82”: 重定义
+C:\Users\mayday\Desktop\合并c.cpp(375): message : 参见“_82”的声明
+C:\Users\mayday\Desktop\合并c.cpp(439,1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+C:\Users\mayday\Desktop\合并c.cpp(439,1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+C:\Users\mayday\Desktop\合并c.cpp(465,7): error C3688: 文本后缀“cpp”无效；未找到文文本运算符或文本运算符模板“operator """"cpp”
