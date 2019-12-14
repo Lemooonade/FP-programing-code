@@ -1,2 +1,2 @@
-# FP-programing-code
- 程序设计基础练习题
+# CQUT-FP-programing-code
+ CQUT程序设计基础练习题
