@@ -1,0 +1,4 @@
+﻿  单词识别.cpp
+E:\source\repos\第二次上机测试\单词识别.cpp(8,20): warning C4018: “<”: 有符号/无符号不匹配
+E:\source\repos\第二次上机测试\单词识别.cpp(27,20): warning C4018: “<”: 有符号/无符号不匹配
+  第二次上机测试.vcxproj -> E:\source\repos\第二次上机测试\Debug\第二次上机测试.exe
