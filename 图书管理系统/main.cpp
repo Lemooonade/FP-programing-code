@@ -33,6 +33,17 @@ bool check_book()
 	}
 	return true;
 }
+bool check_book_name(string book_name)
+{
+	for (int j = 0; j < i; j++)
+	{
+		if (book_name == Book_info[j].book_name)
+		{
+			return true;
+		}
+	}
+	return false;
+}
 void edit_line(int n,int book_id,string book_name,string book_author,string chuban,int year,int mounth,int day,float price,int num )
 {
 	char buf[4096];    //每读取一行，都将内容放到该数组中
@@ -72,6 +83,93 @@ void edit_line(int n,int book_id,string book_name,string book_author,string chub
 	fclose(fpt);
 
 	system("ERASE temp.txt");   //删除文件temp.txt,使用该命令需要包含<stdlib.h>文件
+}
+void del_line(int n)
+{
+	char buf[4096];    //每读取一行，都将内容放到该数组中
+	FILE* fp = fopen("library.txt", "r");     //filepath里是原内容 
+	FILE* fpt = fopen("temp.txt", "w");    //将filepath文件第n行内容删除后存入temp.txt中 
+	int i_lines = 0, i_out_line = 0;
+	while (i_lines < i)
+	{
+		i_lines++;
+		if (i_lines == (n + 1)) //删掉第n行，其实就是读到第n行时，仅仅移动一下文件指针，否则就
+		{          //将读取到的一行文件内容放到临时文件中temp.txt中，这就是所谓的删除
+			fgets(buf, sizeof(buf), fp);   //必须要这一行，因为加上后文件指针将会移动
+		}
+		else
+		{
+			fgets(buf, sizeof(buf), fp);
+			fprintf(fpt, "%s", buf);
+		}
+	}
+	fclose(fp);
+	fclose(fpt);
+
+	fpt = fopen("temp.txt", "r");
+	fp = fopen("library.txt", "wb");   //清空filepath文件
+	fclose(fp);
+
+	fp = fopen("library.txt", "a");
+	while (i_out_line < i-1)
+	{
+		i_out_line++;
+		fgets(buf, sizeof(buf), fpt);
+		fprintf(fp, "%s", buf);
+	}
+
+	fclose(fp);
+	fclose(fpt);
+
+	system("ERASE temp.txt");   //删除文件temp.txt,使用该命令需要包含<stdlib.h>文件
+}
+void del_book()
+{
+	string del_book_name;
+	char tag;
+	FILE* p1, * p2;
+	int k = 0;
+	cout << "请输入你要删除的书的名字" << endl;
+	cin >> del_book_name;
+	if (check_book_name(del_book_name))
+	{
+		system("cls");
+		cout << "你要删除的书是:" << del_book_name << "\n" << "请确认是否修改(Y/N)\n";
+		cin >> tag;
+		if (tag == 'y' || tag == 'Y')
+		{
+			for (int j = 0; j < i; j++)
+			{
+				if (del_book_name == Book_info[j].book_name)
+				{
+					del_line(j);
+					p1 = fopen("id.txt", "w");
+					i = i - 1;
+					fprintf(p1, "%d", i);
+					fclose(p1);
+					p2 = fopen("library.txt", "r");
+					int k = 0;
+					char book_name_tmp[50], book_author_tmp[50], book_chuban_tmp[50];
+					while (!feof(p2))
+					{
+						fscanf(p2, "%d %s %s %s %d %d %d %f %d", &Book_info[k].book_id, book_name_tmp, book_author_tmp, book_chuban_tmp, &Book_info[k].chuban_date.year, &Book_info[k].chuban_date.month, &Book_info[k].chuban_date.day, &Book_info[k].price, &Book_info[k].num);
+						Book_info[k].book_name = book_name_tmp;
+						Book_info[k].book_author = book_author_tmp;
+						Book_info[k].chuban = book_chuban_tmp;
+						k++;
+					}
+					fclose(p2);
+					cout << "删除成功\n\n" << endl;
+					system("pause");
+					break;
+				}
+			}
+		}
+	}
+	else
+	{
+		cout << "没有这本书哦" << endl;
+	}
 }
 void add_book()
 {
@@ -207,13 +305,79 @@ void edit_book()
 				if (tag=='y'||tag=='Y')
 				{
 					Book_info[j].book_author = new_book_author;
-					cout << "修改成功新的信息为\n";
+					cout << "修改成功\n新的信息为:\n";
 					printf("|%-6d%-12s%-10s%-16s  %-d %-2d %-3d  %-8.1f    %-9d|\n", Book_info[j].book_id, Book_info[j].book_name.c_str(), Book_info[j].book_author.c_str(), Book_info[j].chuban.c_str(), Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
 					edit_line(j, Book_info[j].book_id, Book_info[j].book_name, Book_info[j].book_author, Book_info[j].chuban, Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
 				}
 				break;
+			case 2:
 
+				cout << "请输入新的出版社信息\n";
+				cin >> new_book_chuban;
+				system("cls");
+				cout << "你输入的新的出版社信息为:" << new_book_chuban << "\n" << "请确认是否修改(Y/N)\n";
+				cin >> tag;
+				if (tag == 'y' || tag == 'Y')
+				{
+					Book_info[j].chuban = new_book_chuban;
+					cout << "修改成功\n新的信息为:\n";
+					printf("|%-6d%-12s%-10s%-16s  %-d %-2d %-3d  %-8.1f    %-9d|\n", Book_info[j].book_id, Book_info[j].book_name.c_str(), Book_info[j].book_author.c_str(), Book_info[j].chuban.c_str(), Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
+					edit_line(j, Book_info[j].book_id, Book_info[j].book_name, Book_info[j].book_author, Book_info[j].chuban, Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
+				}
+				break;
+			case 3:
+
+				cout << "请输入新的出版年信息\n";
+				cin >> new_date_year;
+				cout << "请输入新的出版月信息\n";
+				cin >> new_date_mounth;
+				cout << "请输入新的出版日信息\n";
+				cin >> new_date_day;
+				system("cls");
+				cout << "你输入的新的出版日期信息为:" << new_date_year+ new_date_mounth +new_date_day << "\n" << "请确认是否修改(Y/N)\n";
+				cin >> tag;
+				if (tag == 'y' || tag == 'Y')
+				{
+					Book_info[j].chuban_date.year = new_date_year;
+					Book_info[j].chuban_date.month = new_date_mounth;
+					Book_info[j].chuban_date.day = new_date_day;
+					cout << "修改成功\n新的信息为:\n";
+					printf("|%-6d%-12s%-10s%-16s  %-d %-2d %-3d  %-8.1f    %-9d|\n", Book_info[j].book_id, Book_info[j].book_name.c_str(), Book_info[j].book_author.c_str(), Book_info[j].chuban.c_str(), Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
+					edit_line(j, Book_info[j].book_id, Book_info[j].book_name, Book_info[j].book_author, Book_info[j].chuban, Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
+				}
+				break;
+			case 4:
+
+				cout << "请输入新的单价\n";
+				cin >> new_book_price;
+				system("cls");
+				cout << "你输入的新的单价为:" << new_book_price << "\n" << "请确认是否修改(Y/N)\n";
+				cin >> tag;
+				if (tag == 'y' || tag == 'Y')
+				{
+					Book_info[j].price = new_book_price;
+					cout << "修改成功\n新的信息为:\n";
+					printf("|%-6d%-12s%-10s%-16s  %-d %-2d %-3d  %-8.1f    %-9d|\n", Book_info[j].book_id, Book_info[j].book_name.c_str(), Book_info[j].book_author.c_str(), Book_info[j].chuban.c_str(), Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
+					edit_line(j, Book_info[j].book_id, Book_info[j].book_name, Book_info[j].book_author, Book_info[j].chuban, Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
+				}
+				break;
+			case 5:
+
+				cout << "请输入新的库存量 \n";
+				cin >> new_num;
+				system("cls");
+				cout << "你输入的新的库存量 为:" << new_num << "\n" << "请确认是否修改(Y/N)\n";
+				cin >> tag;
+				if (tag == 'y' || tag == 'Y')
+				{
+					Book_info[j].num = new_num;
+					cout << "修改成功\n新的信息为:\n";
+					printf("|%-6d%-12s%-10s%-16s  %-d %-2d %-3d  %-8.1f    %-9d|\n", Book_info[j].book_id, Book_info[j].book_name.c_str(), Book_info[j].book_author.c_str(), Book_info[j].chuban.c_str(), Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
+					edit_line(j, Book_info[j].book_id, Book_info[j].book_name, Book_info[j].book_author, Book_info[j].chuban, Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
+				}
+				break;
 			default:
+				cout << "没有这个选项哦";
 				break;
 			}
 		}
@@ -268,6 +432,18 @@ bool login_menu()
 	}
 
 }
+void view_all_book()
+{
+	system("cls");
+	printf("|------------------------------------图书信息------------------------------------|\n");
+	printf("|编号  书名        作者      出版社            出版日期     单价       库存量    |\n");
+	printf("|                                                                                |\n");
+	for (int j = 0; j < i; j++)
+	{
+		printf("|%-6d%-12s%-10s%-16s  %-d %-2d %-3d  %-8.1f    %-9d|\n", Book_info[j].book_id, Book_info[j].book_name.c_str(), Book_info[j].book_author.c_str(), Book_info[j].chuban.c_str(), Book_info[j].chuban_date.year, Book_info[j].chuban_date.month, Book_info[j].chuban_date.day, Book_info[j].price, Book_info[j].num);
+	}
+	system("pause");
+}
 int manager_menu()
 {
 	int option;
@@ -284,7 +460,9 @@ int manager_menu()
 	printf("\t\t\t| *                                     * |\n");
 	printf("\t\t\t| |  [4]   修改错误的图书信息           | |\n");
 	printf("\t\t\t| *                                     * |\n");
-	printf("\t\t\t| |  [5]   退出登录                     | |\n");
+	printf("\t\t\t| |  [5]   查看所有图书                 | |\n");
+	printf("\t\t\t| *                                     * |\n");
+	printf("\t\t\t| |  [6]   退出登录                     | |\n");
 	printf("\t\t\t| *                                     * |\n");
 	printf("\t\t\t|  * - * - * - * - * - * - * - * - * - *  |\n");
 	printf("\t\t\t *=======================================*\n");
@@ -339,9 +517,10 @@ int main()
 			{
 			case 1: add_book(); break;
 			case 2: search_book(); break;
-			case 3:
+			case 3: del_book(); break;
 			case 4: edit_book(); break;
-			case 5: login_menu(); break;
+			case 5: view_all_book(); break;
+			case 6: login_menu(); break;
 			default:cout << "输入错误请重新输入"; break;
 			}
 		}
