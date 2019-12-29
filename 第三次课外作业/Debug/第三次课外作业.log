@@ -1,0 +1,4 @@
+﻿  改进冒泡排序法.cpp
+E:\source\repos\第三次课外作业\改进冒泡排序法.cpp(9,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : 参见“scanf”的声明
+  第三次课外作业.vcxproj -> E:\source\repos\第三次课外作业\Debug\第三次课外作业.exe

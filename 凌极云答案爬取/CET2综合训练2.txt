@@ -1,0 +1,13 @@
+A A B A 
+D C B C 
+C C C B 
+D C A B 
+A D B combination 
+ways match months fight 
+club founded expect B 
+D A C F 
+E L J H 
+A J B D 
+E I J D 
+D D C A 
+B C C 
